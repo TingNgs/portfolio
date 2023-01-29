@@ -32,6 +32,11 @@ about:
       - title: Styled-components
       - title: TypeScript
       - title: SASS/SCSS
+  contact:
+    title: Contact Me
+    email: xnxgxsx@hotmail.com
+    linkedin: https://www.linkedin.com/in/ting-ng-40229b185/
+    github: https://github.com/TingNgs
 projects:
   title: Projects
   description: Here you will find some of my personal projects.

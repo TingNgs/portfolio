@@ -13,6 +13,7 @@ export interface HomeData {
     description: string;
     content: { title: string; content: string };
     skill: { title: string; skills: { title: string }[] };
+    contact: { title: string; email: string; linkedin: string; github: string };
   };
   projects: {
     title: string;
@@ -73,6 +74,24 @@ const Home = ({ data = attributes }: { data?: HomeData }) => {
                 </span>
               ))}
             </div>
+            <h3 className="text-2xl font-bold">{about.contact.title}</h3>
+            <div className="flex gap-5" style={{ color: home.bg_color }}>
+              <a href={`mailto:${about.contact.email}`}>Email</a>
+              <a
+                href={`${about.contact.linkedin}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Linkedin
+              </a>
+              <a
+                href={`${about.contact.github}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Github
+              </a>
+            </div>
           </div>
         </div>
       </Section>
@@ -95,7 +114,11 @@ const Home = ({ data = attributes }: { data?: HomeData }) => {
                   alt={`${project.title} image`}
                 />
               </div>
-              <div className="w-full md:w-auto flex-1 h-auto flex flex-col gap-5">
+              <div
+                className={`w-full md:w-auto flex-1 h-auto flex flex-col gap-5 md:items-${
+                  index % 2 === 1 ? "start" : "end"
+                }`}
+              >
                 <h5 className="text-2xl">{project.title}</h5>
                 <ReactMarkdown>{project.description}</ReactMarkdown>
                 <div className="flex gap-4 flex-wrap">
