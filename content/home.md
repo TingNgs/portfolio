@@ -75,6 +75,16 @@ projects:
       tech:
         - title: jQuery
       thumbnail: img/loopstationweb.png
+    - id: isaac
+      title: The Binding of Isaac (Clone)
+      thumbnail: img/isaac.png
+      description: OOP Lab assignment. Clone a game (The Binding of Isaac) by using
+        the professor's JS framework.
+      tech:
+        - title: Javascript
+      button:
+        text: LIVE LINK
+        url: https://thianhe.github.io/OopLab/
 experiences:
   title: Experience
   experiences:
