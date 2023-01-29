@@ -22,6 +22,7 @@ export interface HomeData {
       description: string;
       id: string;
       thumbnail: string;
+      tech: { title: string }[];
     }[];
   };
   experiences: {
@@ -63,7 +64,10 @@ const Home = ({ data = attributes }: { data?: HomeData }) => {
             <h3 className="text-2xl font-bold">{about.skill.title}</h3>
             <div className="flex flex-wrap gap-3">
               {about.skill.skills.map((skill, index) => (
-                <span key={index} className="p-3 bg-gray-100 font-semibold">
+                <span
+                  key={index}
+                  className="p-3 bg-gray-100 font-semibold rounded-md"
+                >
                   {skill.title}
                 </span>
               ))}
@@ -74,9 +78,14 @@ const Home = ({ data = attributes }: { data?: HomeData }) => {
       <Section id="projects">
         <SectionTitle>{projects.title}</SectionTitle>
         <SectionDescription>{projects.description}</SectionDescription>
-        <div className="flex flex-col gap-2 w-full">
-          {projects.projects.map((project) => (
-            <div key={project.id} className="flex flex-wrap gap-5 items-center">
+        <div className="flex flex-col gap-10 w-full">
+          {projects.projects.map((project, index) => (
+            <div
+              key={project.id}
+              className={`flex flex-wrap gap-6 items-center ${
+                index % 2 === 1 ? "md:flex-row-reverse" : ""
+              }`}
+            >
               <div className="w-full md:w-[30rem]">
                 <Image
                   width={480}
@@ -85,9 +94,19 @@ const Home = ({ data = attributes }: { data?: HomeData }) => {
                   alt={`${project.title} image`}
                 />
               </div>
-              <div className="w-full md:w-auto flex-1 h-auto">
+              <div className="w-full md:w-auto flex-1 h-auto flex flex-col gap-3">
                 <h5 className="text-2xl">{project.title}</h5>
                 <ReactMarkdown>{project.description}</ReactMarkdown>
+                <div className="flex gap-4 flex-wrap">
+                  {project.tech.map((tech, index) => (
+                    <div
+                      key={index}
+                      className="p-2 bg-gray-100 font-semibold rounded-md"
+                    >
+                      {tech.title}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           ))}

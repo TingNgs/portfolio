@@ -45,7 +45,6 @@ experiences:
   title: Experience
   experiences:
     - title: Frontend engineer
-      date: ""
       description: >-
         Storefront team
 
