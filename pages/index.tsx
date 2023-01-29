@@ -6,7 +6,6 @@ export interface HomeData {
 }
 
 const Home = ({ data = attributes }: { data?: HomeData }) => {
-  console.log(data);
   const { title, cats } = data;
   return (
     <article>
