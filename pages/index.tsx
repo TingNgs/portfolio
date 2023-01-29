@@ -115,8 +115,8 @@ const Home = ({ data = attributes }: { data?: HomeData }) => {
                 />
               </div>
               <div
-                className={`w-full md:w-auto flex-1 h-auto flex flex-col gap-5 md:items-${
-                  index % 2 === 1 ? "start" : "end"
+                className={`w-full md:w-auto flex-1 h-auto flex flex-col gap-5 ${
+                  index % 2 === 1 ? "md:items-start" : "md:items-end"
                 }`}
               >
                 <h5 className="text-2xl">{project.title}</h5>
