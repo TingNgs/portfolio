@@ -24,7 +24,7 @@ collections:
           fields: 
             - { label: "Title", name: "title", widget: "string" }
             - { label: "Description", name: "description", widget: "markdown" }
-            - { label: 'Background Color', name: 'bgColor', widget: 'color' }
+            - { label: 'Background Color', name: 'bg_color', widget: 'color' }
         - label: "About"
           name: "about"
           widget: "object"
@@ -73,6 +73,8 @@ collections:
               name: "experiences"
               widget: "list"
               fields:
+                - { label: "Company", name: "company", widget: "string" }
+                - { label: "Company Description", name: "company_description", widget: "string" }
                 - { label: "Title", name: "title", widget: "string" }
                 - { label: "Date Start", name: "date_start", widget: "date", format: "MMM YYYY" }
                 - { label: "Date End", name: "date_end", widget: "date", format: "MMM YYYY" }

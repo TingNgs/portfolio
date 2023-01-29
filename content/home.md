@@ -4,7 +4,7 @@ home:
   title: Hi! I'm Ting Ng
   description: I'm a front-end developer who likes to do interesting, challenging,
     and impactful stuff with web technologies.
-  bgColor: "#578bde"
+  bg_color: "#578bde"
 about:
   title: About
   description: Learn more about me

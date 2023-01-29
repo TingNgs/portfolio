@@ -1,4 +1,5 @@
 import { HTMLProps, PropsWithChildren } from "react";
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
 const SectionDescription = ({
   children,
@@ -6,9 +7,9 @@ const SectionDescription = ({
   ...rest
 }: PropsWithChildren<HTMLProps<HTMLHeadingElement>>) => {
   return (
-    <p className={`text-center text-xl ${className}`} {...rest}>
-      {children}
-    </p>
+    <ReactMarkdown className={`text-center text-xl ${className}`} {...rest}>
+      {children as string}
+    </ReactMarkdown>
   );
 };
 
