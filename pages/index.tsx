@@ -45,8 +45,8 @@ const Home = ({ data = attributes }: { data?: HomeData }) => {
     <>
       <Section
         id="home"
-        className={`text-center justify-center flex-col h-screen max-w-full`}
-        style={{ backgroundColor: home.bg_color }}
+        className={`text-center justify-center flex-col h-screen`}
+        style={{ backgroundColor: home.bg_color, maxWidth: "100%" }}
       >
         <h1 className="text-5xl font-bold">{home.title}</h1>
         <SectionDescription className="text-2xl">
@@ -59,7 +59,7 @@ const Home = ({ data = attributes }: { data?: HomeData }) => {
         <div className="flex flex-wrap gap-5">
           <div className="w-full md:w-1/3 flex-grow flex flex-col gap-5">
             <h3 className="text-2xl font-bold">{about.content.title}</h3>
-            <p>{about.content.content}</p>
+            <ReactMarkdown>{about.content.content}</ReactMarkdown>
           </div>
           <div className="w-full md:w-1/3 flex-grow flex flex-col gap-5">
             <h3 className="text-2xl font-bold">{about.skill.title}</h3>
@@ -108,6 +108,15 @@ const Home = ({ data = attributes }: { data?: HomeData }) => {
                     </div>
                   ))}
                 </div>
+                <a
+                  href={project.button.url}
+                  target="_blank"
+                  className="rounded-md p-2 w-fit hover:opacity-80 "
+                  style={{ backgroundColor: home.bg_color }}
+                  rel="noreferrer"
+                >
+                  {project.button.text}
+                </a>
               </div>
             </div>
           ))}

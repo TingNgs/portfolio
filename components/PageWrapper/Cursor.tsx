@@ -24,7 +24,7 @@ const Cursor = () => {
   return (
     <div
       ref={pointerRef}
-      className="fixed hidden h-5 w-5 bg-black rounded-full -translate-y-1/2 -translate-x-1/2 pointer-events-none z-50 transition-[width,height] duration-300"
+      className="fixed hidden h-5 w-5 border-2 rounded-full -translate-y-1/2 -translate-x-1/2 pointer-events-none z-50 transition-[width,height] duration-300"
     ></div>
   );
 };
