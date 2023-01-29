@@ -2,26 +2,26 @@
 date: 2019-03-17T19:31:20.591Z
 home:
   title: Hi! I'm Ting Ng
-  description: >-
-    I'm a front-end developer who likes to do interesting, challenging, and
-    impactful stuff with web technologies.
-
-
-    * 3 years of experience working in web development
-
-    * Familiar with RESTful APIs & WebSocket connection
-
-    * Experienced in developing responsive/adaptive websites
-
-    * Experienced in Unit Testing (Jest.js / React testing library)
+  description: I'm a front-end developer who likes to do interesting, challenging,
+    and impactful stuff with web technologies.
   bg_color: "#578bde"
 about:
   title: About
   description: Learn more about me
   content:
     title: Get to know me!
-    content: I'm a front-end developer who likes to do interesting, challenging, and
+    content: >-
+      I'm a front-end developer who likes to do interesting, challenging, and
       impactful stuff with web technologies.
+
+
+      * 3 years of experience working in web development
+
+      * Familiar with RESTful APIs & WebSocket connection
+
+      * Experienced in developing responsive/adaptive websites
+
+      * Experienced in Unit Testing (Jest.js / React testing library)
   skill:
     title: Skills
     skills:
@@ -44,6 +44,9 @@ projects:
         - title: reactJS
         - title: redux
         - title: cypress
+      button:
+        text: LIVE LINK
+        url: https://i18n-cms.pages.dev/
     - id: portfolio
       title: Portfolio
       description: A nextjs portfolio website integrated with Netlify cms
@@ -51,6 +54,9 @@ projects:
       tech:
         - title: nextjs
         - title: netlifycms
+      button:
+        text: LIVE LINK
+        url: https://ting-ng.netlify.app/
 experiences:
   title: Experience
   experiences:
