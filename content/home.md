@@ -1,7 +1,7 @@
 ---
 date: 2019-03-17T19:31:20.591Z
 home:
-  title: Hi! I'm Ting Ng qweqwe
+  title: Hi! I'm Ting Ng
   description: I'm a front-end developer who likes to do interesting, challenging,
     and impactful stuff with web technologies.
   bg_color: "#578bde"
