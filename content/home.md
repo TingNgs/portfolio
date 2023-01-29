@@ -33,7 +33,7 @@ projects:
     - id: portfolio
       title: Portfolio template with Netlify cms
       description: A portfolio website with Netlify cms
-      thumbnail: img/macbook-pro.png
+      thumbnail: img/screenshot-2023-01-29-at-9.58.35-pm.png
 experiences:
   title: Experience
   experiences:
