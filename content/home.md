@@ -30,10 +30,17 @@ projects:
       title: i18n-cms
       description: A git-based CMS for managing translation files.
       thumbnail: img/header-light.a332c6bb184b661e9cb7.png
+      tech:
+        - title: reactJS
+        - title: redux
+        - title: cypress
     - id: portfolio
       title: Portfolio template with Netlify cms
       description: A portfolio website with Netlify cms
       thumbnail: img/screenshot-2023-01-29-at-9.58.35-pm.png
+      tech:
+        - title: nextjs
+        - title: netlifycms
 experiences:
   title: Experience
   experiences:
