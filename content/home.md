@@ -49,9 +49,9 @@ experiences:
         Storefront team
 
 
-        * Participated in designing and integrating a new page builder architecture into the existing themes system for the e-commerce website
+        * Participated in designing and integrating a [new page builder](https://support.shoplineapp.com/hc/en-us/articles/5765970540697--Coming-Soon-SHOPLINE-Page-Builder-New-#h_01G74C7NVXDPA1AVS3VQK3VHZ3) architecture into the existing themes system for the e-commerce website
 
-        * Participated in building new widgets and store settings support for new page builder
+        * Participated in building new widgets and [store settings](https://support.shoplineapp.com/hc/en-us/articles/9885492115865-Store-Settings-Page-Builder-New-) support for new page builder
 
         * Worked cooperatively and efficiently with teams located in 3 different countries. (Taiwan, Hong Kong, and mainland China)
 
