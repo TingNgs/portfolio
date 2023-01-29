@@ -2,8 +2,18 @@
 date: 2019-03-17T19:31:20.591Z
 home:
   title: Hi! I'm Ting Ng
-  description: I'm a front-end developer who likes to do interesting, challenging,
-    and impactful stuff with web technologies.
+  description: >-
+    I'm a front-end developer who likes to do interesting, challenging, and
+    impactful stuff with web technologies.
+
+
+    * 3 years of experience working in web development
+
+    * Familiar with RESTful APIs & WebSocket connection
+
+    * Experienced in developing responsive/adaptive websites
+
+    * Experienced in Unit Testing (Jest.js / React testing library)
   bg_color: "#578bde"
 about:
   title: About
