@@ -66,4 +66,28 @@ experiences:
       date_end: Aug 2022
       company: SHOPLINE
       company_description: E-commerce SaaS platform
+    - date_start: Jun 2020
+      date_end: Oct 2020
+      company: Grindr
+      company_description: Location-based social networking platform
+      title: Frontend Engineer
+      description: >-
+        Grindr web (Location-based dating app)
+
+
+        * Improve performance of large list rendering using React Virtualized
+
+        * Participated in building a live streaming system in Grindr Web using agora technology
+
+        * Implement webp cross-browser support
+    - date_start: Jun 2019
+      date_end: May 2020
+      company: Grindr
+      company_description: Location-based social networking platform
+      title: Frontend Intern
+      description: |-
+        Looqr (UGC-based social platform)
+
+        * Experience in using Next.js for server-side rendering
+        * Revamp UI structure
 ---
