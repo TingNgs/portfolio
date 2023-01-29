@@ -29,9 +29,11 @@ projects:
     - id: i18n-cms
       title: i18n-cms
       description: A git-based CMS for managing translation files.
+      thumbnail: img/macbook-pro.png
     - id: portfolio
-      title: portfolio template with Netlify cms
+      title: Portfolio template with Netlify cms
       description: A portfolio website with Netlify cms
+      thumbnail: img/macbook-pro.png
 experiences:
   title: Experience
   experiences:
@@ -54,6 +56,8 @@ experiences:
         * Participated in refactoring and integrating a separated POS admin system into an e-commerce admin system, and delivered features that work in both systems
 
         * Rewrote legacy code from AngularJS to React with Typescript and refined state management.
-      date_start: Jan 2023
-      date_end: Jan 2023
+      date_start: Nov 2020
+      date_end: Aug 2022
+      company: SHOPLINE
+      company_description: E-commerce SaaS platform
 ---

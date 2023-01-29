@@ -17,11 +17,18 @@ export interface HomeData {
   projects: {
     title: string;
     description: string;
-    projects: { title: string; description: string; id: string }[];
+    projects: {
+      title: string;
+      description: string;
+      id: string;
+      thumbnail: string;
+    }[];
   };
   experiences: {
     title: string;
     experiences: {
+      company: string;
+      company_description: string;
       title: string;
       date_start: string;
       date_end: string;
@@ -74,8 +81,8 @@ const Home = ({ data = attributes }: { data?: HomeData }) => {
                 <Image
                   width={480}
                   height={296}
-                  src="/img/macbook-pro.png"
-                  alt="macbook-mockup"
+                  src={`/${project.thumbnail}` || "/img/macbook-pro.png"}
+                  alt={`${project.title} image`}
                 />
               </div>
               <div className="w-full md:w-auto flex-1 h-auto">
@@ -91,10 +98,17 @@ const Home = ({ data = attributes }: { data?: HomeData }) => {
         <div>
           {experiences.experiences.map((experience, index) => (
             <div key={index}>
-              <h5 className="text-2xl">{experience.title}</h5>
-              <p>
-                {experience.date_start} - {experience.date_end}
-              </p>
+              <div>
+                <span className="text-lg font-bold">{experience.company}</span>{" "}
+                - <span>{experience.company_description}</span>
+              </div>
+              <div>
+                <span className="text-2xl">{experience.title}</span>{" "}
+                <span>
+                  {experience.date_start} - {experience.date_end}
+                </span>
+              </div>
+
               <ReactMarkdown>{experience.description}</ReactMarkdown>
             </div>
           ))}
