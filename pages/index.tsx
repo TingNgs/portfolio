@@ -23,6 +23,7 @@ export interface HomeData {
       id: string;
       thumbnail: string;
       tech: { title: string }[];
+      button: { text: string; url: string };
     }[];
   };
   experiences: {
@@ -94,7 +95,7 @@ const Home = ({ data = attributes }: { data?: HomeData }) => {
                   alt={`${project.title} image`}
                 />
               </div>
-              <div className="w-full md:w-auto flex-1 h-auto flex flex-col gap-3">
+              <div className="w-full md:w-auto flex-1 h-auto flex flex-col gap-5">
                 <h5 className="text-2xl">{project.title}</h5>
                 <ReactMarkdown>{project.description}</ReactMarkdown>
                 <div className="flex gap-4 flex-wrap">
@@ -116,7 +117,7 @@ const Home = ({ data = attributes }: { data?: HomeData }) => {
         <SectionTitle>{experiences.title}</SectionTitle>
         <div>
           {experiences.experiences.map((experience, index) => (
-            <div key={index}>
+            <div key={index} className="border-b-2 pb-5 mb-5">
               <div>
                 <span className="text-lg font-bold">{experience.company}</span>{" "}
                 - <span>{experience.company_description}</span>

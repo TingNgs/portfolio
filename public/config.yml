@@ -68,6 +68,12 @@ collections:
                   widget: "list"
                   fields: 
                     - { label: "Title", name: "title", widget: "string" }
+                - label: "Button"
+                  name: "button"
+                  widget: "object"
+                  fields: 
+                    - { label: "Text", name: "text", widget: "string" }
+                    - { label: "Url", name: "url", widget: "string" }
         - label: "Experiences"
           name: "experiences"
           widget: "object"

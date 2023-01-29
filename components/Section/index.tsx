@@ -7,7 +7,7 @@ const Section = ({
 }: PropsWithChildren<HTMLProps<HTMLDivElement>>) => {
   return (
     <section
-      className={`p-10 flex flex-col gap-10 w-full max-w-[72rem] mx-auto ${className}`}
+      className={`p-10 pt-[5rem] flex flex-col gap-10 w-full max-w-[72rem] mx-auto ${className}`}
       {...rest}
     >
       {children}
