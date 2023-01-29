@@ -64,6 +64,17 @@ projects:
       button:
         text: LIVE LINK
         url: https://ting-ng.netlify.app/
+    - id: loopstateionweb
+      title: LoopStationWeb
+      description: Independent study (Final Year Project) for my bachelor's degree. A
+        web app can create complete songs by layering your recordings on web
+        browser.
+      button:
+        url: https://tingngs.github.io/LoopStationWeb/
+        text: LIVE LINK
+      tech:
+        - title: jQuery
+      thumbnail: img/loopstationweb.png
 experiences:
   title: Experience
   experiences:
