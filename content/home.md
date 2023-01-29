@@ -35,8 +35,8 @@ projects:
         - title: redux
         - title: cypress
     - id: portfolio
-      title: Portfolio template with Netlify cms
-      description: A portfolio website with Netlify cms
+      title: Portfolio
+      description: A nextjs portfolio website integrated with Netlify cms
       thumbnail: img/screenshot-2023-01-29-at-9.58.35-pm.png
       tech:
         - title: nextjs
