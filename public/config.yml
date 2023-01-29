@@ -12,12 +12,60 @@ collections:
       name: "home"
       file: "content/home.md"
       fields:
-        - { label: "Title", name: "title", widget: "string"}
-        - { label: "Publish Date", name: "date", widget: "datetime" }
-        - { label: "Content", name: "content", widget: "markdown"}
-        - label: 'Cats'
-          name: "cats"
-          widget: list
-          fields:
-            - { label: "Name", name: "name", widget: "string"}
-            - { label: "Description", name: "description", widget: "text"}
+        - label: "Home"
+          name: "home"
+          widget: "object"
+          collapsed: true
+          fields: 
+            - { label: "Title", name: "title", widget: "string" }
+            - { label: "Description", name: "description", widget: "markdown" }
+        - label: "About"
+          name: "about"
+          widget: "object"
+          collapsed: true
+          fields: 
+            - { label: "Title", name: "title", widget: "string" }
+            - { label: "Description", name: "description", widget: "markdown" }
+            - label: "Content"
+              name: "content"
+              widget: "object"
+              fields: 
+                - { label: "Title", name: "title", widget: "string" }
+                - { label: "Content", name: "content", widget: "markdown" }
+            - label: "Skill"
+              name: "skill"
+              widget: "object"
+              fields: 
+                - { label: "Title", name: "title", widget: "string" }
+                - label: "Skills"
+                  name: "skills"
+                  widget: "list"
+                  fields:
+                    - { label: "Skill", name: "skill", widget: "string" }
+        - label: "Projects"
+          name: "projects"
+          widget: "object"
+          collapsed: true
+          fields: 
+            - { label: "Title", name: "title", widget: "string" }
+            - { label: "Description", name: "description", widget: "markdown" }
+            - label: "Projects"
+              name: "projects"
+              widget: "list"
+              fields:
+                - { label: "Id", name: "id", widget: "string" }
+                - { label: "Title", name: "title", widget: "string" }
+                - { label: "Description", name: "description", widget: "markdown" }
+        - label: "Experiences"
+          name: "experiences"
+          widget: "object"
+          collapsed: true
+          fields: 
+            - { label: "Title", name: "title", widget: "string" }
+            - label: "Experiences"
+              name: "experiences"
+              widget: "list"
+              fields:
+                - { label: "Title", name: "title", widget: "string" }
+                - { label: "Date", name: "date", widget: "date", format: "MMM YYYY" }
+                - { label: "Description", name: "description", widget: "markdown" }
