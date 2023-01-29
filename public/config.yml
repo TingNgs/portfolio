@@ -8,6 +8,11 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
+    - name: "config"
+      label: "Config"
+      file: "content/config.md"
+      fields:
+        - { label: "Title", name: "title", widget: "string" }
     - label: "Home"
       name: "home"
       file: "content/home.md"
@@ -19,6 +24,7 @@ collections:
           fields: 
             - { label: "Title", name: "title", widget: "string" }
             - { label: "Description", name: "description", widget: "markdown" }
+            - { label: 'Background Color', name: 'bgColor', widget: 'color' }
         - label: "About"
           name: "about"
           widget: "object"
@@ -41,7 +47,7 @@ collections:
                   name: "skills"
                   widget: "list"
                   fields:
-                    - { label: "Skill", name: "skill", widget: "string" }
+                    - { label: "Skill title", name: "title", widget: "string" }
         - label: "Projects"
           name: "projects"
           widget: "object"
@@ -55,6 +61,7 @@ collections:
               fields:
                 - { label: "Id", name: "id", widget: "string" }
                 - { label: "Title", name: "title", widget: "string" }
+                - { label: "Featured Image", name: "thumbnail", widget: "image" }
                 - { label: "Description", name: "description", widget: "markdown" }
         - label: "Experiences"
           name: "experiences"
@@ -67,5 +74,6 @@ collections:
               widget: "list"
               fields:
                 - { label: "Title", name: "title", widget: "string" }
-                - { label: "Date", name: "date", widget: "date", format: "MMM YYYY" }
+                - { label: "Date Start", name: "date_start", widget: "date", format: "MMM YYYY" }
+                - { label: "Date End", name: "date_end", widget: "date", format: "MMM YYYY" }
                 - { label: "Description", name: "description", widget: "markdown" }

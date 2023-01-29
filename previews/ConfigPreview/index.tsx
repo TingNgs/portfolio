@@ -2,13 +2,13 @@ import React from "react";
 import Home from "@/pages/index";
 import PageWrapper from "@/components/PageWrapper";
 
-const HomePreview = ({ entry }: any) => {
+const ConfigPreview = ({ entry }: any) => {
   const page = entry.toJS();
 
   return (
-    <PageWrapper>
-      <Home {...page} />
+    <PageWrapper {...page}>
+      <Home />
     </PageWrapper>
   );
 };
-export default HomePreview;
+export default ConfigPreview;

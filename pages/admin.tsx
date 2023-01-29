@@ -1,5 +1,6 @@
 import { useEffect } from "react";
-import PagePreview from "@/previews/HomePreview";
+import HomePreview from "@/previews/HomePreview";
+import ConfigPreview from "@/previews/ConfigPreview";
 
 const Admin = () => {
   useEffect(() => {
@@ -7,7 +8,8 @@ const Admin = () => {
       const CMS = (await import("netlify-cms-app")).default;
       CMS.init();
       CMS.registerPreviewStyle("/admin/main.css");
-      CMS.registerPreviewTemplate("home", PagePreview);
+      CMS.registerPreviewTemplate("config", ConfigPreview);
+      CMS.registerPreviewTemplate("home", HomePreview);
     })();
   }, []);
 

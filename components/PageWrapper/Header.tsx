@@ -1,14 +1,10 @@
-import { attributes } from "../../content/config.md";
+import { ConfigData } from "@/interface";
 
-interface ConfigData {
-  title: string;
-}
-
-const Header = ({ data = attributes }: { data?: ConfigData }) => {
+const Header = ({ data }: { data: ConfigData }) => {
   const { title } = data;
 
   return (
-    <header className="sticky top-0 z-10 bg-white h-20 w-100% flex align-middle justify-between p-5">
+    <header className="fixed w-full top-0 z-10 bg-white h-20 flex items-center justify-between p-5">
       <div className="">{title}</div>
 
       <div className=" flex gap-2">

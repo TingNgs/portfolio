@@ -1,3 +1,8 @@
+import Image from "next/image";
+import Section from "@/components/Section";
+import SectionTitle from "@/components/SectionTitle";
+import SectionDescription from "@/components/SectionDescription";
+
 import { attributes } from "../content/home.md";
 
 export interface HomeData {
@@ -23,45 +28,59 @@ const Home = ({ data = attributes }: { data?: HomeData }) => {
   const { home, about, projects, experiences } = data;
   return (
     <>
-      <section
+      <Section
         id="home"
-        className="flex text-center justify-center flex-col h-screen"
+        className="text-center justify-center flex-col h-screen"
       >
-        <h1>{home.title}</h1>
-        <p>{home.description}</p>
-      </section>
-      <section id="about">
-        <h2>{about.title}</h2>
-        <p>{about.description}</p>
-        <div className="flex">
-          <div>
-            <h3>{about.content.title}</h3>
+        <h1 className="text-5xl font-bold">{home.title}</h1>
+        <SectionDescription className="text-2xl">
+          {home.description}
+        </SectionDescription>
+      </Section>
+      <Section id="about">
+        <SectionTitle>{about.title}</SectionTitle>
+        <SectionDescription>{about.description}</SectionDescription>
+        <div className="flex flex-wrap">
+          <div className="w-full md:w-1/2 flex flex-col gap-5">
+            <h3 className="text-2xl font-bold">{about.content.title}</h3>
             <p>{about.content.content}</p>
           </div>
-          <div>
-            <h3>{about.skill.title}</h3>
-            <div>
+          <div className="w-full md:w-1/2 flex flex-col gap-5">
+            <h3 className="text-2xl font-bold">{about.skill.title}</h3>
+            <div className="flex flex-wrap gap-3">
               {about.skill.skills.map((skill, index) => (
-                <span key={index}>{skill.title}</span>
+                <span key={index} className="p-3 bg-gray-100 font-semibold">
+                  {skill.title}
+                </span>
               ))}
             </div>
           </div>
         </div>
-      </section>
-      <section id="projects">
-        <h2>{projects.title}</h2>
-        <p>{projects.description}</p>
-        <div>
+      </Section>
+      <Section id="projects">
+        <SectionTitle>{projects.title}</SectionTitle>
+        <SectionDescription>{projects.description}</SectionDescription>
+        <div className="flex flex-col gap-2 w-full">
           {projects.projects.map((project) => (
-            <div key={project.id}>
-              <p>{project.title}</p>
-              <p>{project.description}</p>
+            <div key={project.id} className="flex flex-wrap gap-5 items-center">
+              <div className="w-full md:w-[30rem]">
+                <Image
+                  width={480}
+                  height={296}
+                  src="/img/macbook-pro.png"
+                  alt="macbook-mockup"
+                />
+              </div>
+              <div className="w-full md:w-auto flex-1 h-auto">
+                <h5 className="text-2xl">{project.title}</h5>
+                <p>{project.description}</p>
+              </div>
             </div>
           ))}
         </div>
-      </section>
-      <section id="experiences">
-        <h2>{experiences.title}</h2>
+      </Section>
+      <Section id="experiences">
+        <SectionTitle>{experiences.title}</SectionTitle>
         <div>
           {experiences.experiences.map((experience, index) => (
             <div key={index}>
@@ -71,7 +90,7 @@ const Home = ({ data = attributes }: { data?: HomeData }) => {
             </div>
           ))}
         </div>
-      </section>
+      </Section>
     </>
   );
 };
