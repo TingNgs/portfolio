@@ -44,6 +44,7 @@ projects:
         - title: reactJS
         - title: redux
         - title: cypress
+        - title: chakra-ui
       button:
         text: LIVE LINK
         url: https://i18n-cms.pages.dev/
@@ -53,7 +54,8 @@ projects:
       thumbnail: img/screenshot-2023-01-29-at-9.58.35-pm.png
       tech:
         - title: nextjs
-        - title: netlifycms
+        - title: netlify cms
+        - title: tailwind css
       button:
         text: LIVE LINK
         url: https://ting-ng.netlify.app/
