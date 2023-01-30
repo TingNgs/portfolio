@@ -46,9 +46,10 @@ projects:
       description: A git-based CMS for managing translation files.
       thumbnail: img/header-light.a332c6bb184b661e9cb7.png
       tech:
-        - title: reactJS
+        - title: reactjs
         - title: redux
         - title: cypress
+        - title: firebase
         - title: chakra-ui
       button:
         text: LIVE LINK
