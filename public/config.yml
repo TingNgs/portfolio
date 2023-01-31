@@ -13,6 +13,7 @@ collections:
       file: "content/config.md"
       fields:
         - { label: "Title", name: "title", widget: "string" }
+        - { label: "Primary Color", name: "primary_color", widget: "color" }
     - label: "Home"
       name: "home"
       file: "content/home.md"

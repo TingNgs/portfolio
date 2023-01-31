@@ -3,8 +3,11 @@ import ReactMarkdown from "react-markdown";
 import Section from "@/components/Section";
 import SectionTitle from "@/components/SectionTitle";
 import SectionDescription from "@/components/SectionDescription";
+import Link from "@/components/Link";
 
 import { attributes } from "../content/home.md";
+import { attributes as configAttributes } from "../content/config.md";
+import { ConfigData } from "@/interface";
 
 export interface HomeData {
   home: { title: string; description: string; bg_color: string };
@@ -40,7 +43,13 @@ export interface HomeData {
   };
 }
 
-const Home = ({ data = attributes }: { data?: HomeData }) => {
+const Home = ({
+  data = attributes,
+  configData = configAttributes,
+}: {
+  data?: HomeData;
+  configData?: ConfigData;
+}) => {
   const { home, about, projects, experiences } = data;
   return (
     <>
@@ -75,22 +84,26 @@ const Home = ({ data = attributes }: { data?: HomeData }) => {
               ))}
             </div>
             <h3 className="text-2xl font-bold">{about.contact.title}</h3>
-            <div className="flex gap-5" style={{ color: home.bg_color }}>
-              <a href={`mailto:${about.contact.email}`}>Email</a>
-              <a
-                href={`${about.contact.linkedin}`}
+            <div className="flex gap-5">
+              <Link
+                href={`mailto:${about.contact.email}`}
+                text="Email"
+                color={configData.primary_color}
+              />
+              <Link
+                href={about.contact.linkedin}
+                text="Linkedin"
+                color={configData.primary_color}
                 target="_blank"
                 rel="noreferrer"
-              >
-                Linkedin
-              </a>
-              <a
-                href={`${about.contact.github}`}
+              />
+              <Link
+                href={about.contact.github}
+                text="Github"
+                color={configData.primary_color}
                 target="_blank"
                 rel="noreferrer"
-              >
-                Github
-              </a>
+              />
             </div>
           </div>
         </div>
@@ -135,7 +148,7 @@ const Home = ({ data = attributes }: { data?: HomeData }) => {
                   href={project.button.url}
                   target="_blank"
                   className="rounded-md p-2 w-fit hover:opacity-80 "
-                  style={{ backgroundColor: home.bg_color }}
+                  style={{ backgroundColor: configData.primary_color }}
                   rel="noreferrer"
                 >
                   {project.button.text}

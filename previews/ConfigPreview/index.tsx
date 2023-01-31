@@ -7,7 +7,7 @@ const ConfigPreview = ({ entry }: any) => {
 
   return (
     <PageWrapper {...page}>
-      <Home />
+      <Home configData={page.data} />
     </PageWrapper>
   );
 };

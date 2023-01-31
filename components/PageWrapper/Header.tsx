@@ -1,4 +1,12 @@
 import { ConfigData } from "@/interface";
+import Link from "../Link";
+
+const LINK_LIST = [
+  { text: "Home", url: "#home" },
+  { text: "About", url: "#about" },
+  { text: "Projects", url: "#projects" },
+  { text: "Experiences", url: "#experiences" },
+];
 
 const Header = ({ data }: { data: ConfigData }) => {
   const { title } = data;
@@ -8,10 +16,9 @@ const Header = ({ data }: { data: ConfigData }) => {
       <div className="">{title}</div>
 
       <div className=" flex gap-2">
-        <a href={`#home`}>Home</a>
-        <a href={`#about`}>About</a>
-        <a href={`#projects`}>Projects</a>
-        <a href={`#experiences`}>Experiences</a>
+        {LINK_LIST.map(({ text, url }) => (
+          <Link key={text} text={text} href={url} color={data.primary_color} />
+        ))}
       </div>
     </header>
   );
